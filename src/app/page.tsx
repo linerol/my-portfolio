@@ -1,103 +1,96 @@
-import Image from "next/image";
+"use client"
+import { useState } from "react";
+import PresentationMinimal from "@/components/PresentationMinimal";
+import PresentationDetails from "@/components/PresentationDetails";
+import TechnicalSkillsMinimal from "@/components/TechnicalSkillsMinimal";
+import TechnicalSkillsDetails from "@/components/TechnicalSkillsDetails";
+import SoftSkillsMinimal from "@/components/SoftSkillsMinimal";
+import SoftSkillsDetails from "@/components/SoftSkillsDetails";
+import ProjectsMinimal from "@/components/ProjectsMinimal";
+import ProjectsDetails from "@/components/ProjectsDetails";
+import EducationMinimal from "@/components/EducationMinimal";
+import EducationDetails from "@/components/EducationDetails";
+import CVMinimal from "@/components/CVMinimal";
+import Contact from "@/components/Contact";
+import ExperienceMinimal from "@/components/ExperienceMinimal";
+import ExperienceDetails from "@/components/ExperienceDetails";
+
+type DetailView = 'presentation' | 'technicalSkills' | 'softSkills' | 'projects' | 'education' | 'experience' | null;
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [detailView, setDetailView] = useState<DetailView>(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  const handleOpenDetails = (view: DetailView) => {
+    setDetailView(view);
+  };
+
+  const handleCloseDetails = () => {
+    setDetailView(null);
+  };
+
+  // Si on est sur la page projets ou expériences, afficher la page complète
+  if (detailView === 'projects' || detailView === 'experience') {
+    const fullPageComponents = {
+      projects: <ProjectsDetails onClose={handleCloseDetails} />,
+      experience: <ExperienceDetails onClose={handleCloseDetails} />
+    };
+    return fullPageComponents[detailView] || null;
+  }
+
+  // Pour les autres vues, afficher les modals
+  if (detailView) {
+    const detailComponents = {
+      presentation: <PresentationDetails onClose={handleCloseDetails} />,
+      technicalSkills: <TechnicalSkillsDetails onClose={handleCloseDetails} />,
+      softSkills: <SoftSkillsDetails onClose={handleCloseDetails} />,
+      education: <EducationDetails onClose={handleCloseDetails} />
+    };
+
+    return detailComponents[detailView] || null;
+  }
+
+  return (
+    <div className="grid grid-cols-6 gap-4 auto-rows-min">
+      {/* Présentation - carte principale (hauteur réduite de moitié) */}
+      <div className="col-span-2 bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all duration-300">
+        <PresentationMinimal onOpenDetails={() => handleOpenDetails('presentation')} />
+      </div>
+
+      {/* Compétences Techniques - carte moyenne */}
+      <div className="col-span-4 bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all duration-300">
+        <TechnicalSkillsMinimal onOpenDetails={() => handleOpenDetails('technicalSkills')} />
+      </div>
+
+      {/* Soft Skills - carte moyenne */}
+      <div className="col-span-2 bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all duration-300">
+        <SoftSkillsMinimal onOpenDetails={() => handleOpenDetails('softSkills')} />
+      </div>
+
+      {/* Projets - carte large */}
+      <div className="col-span-4 bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all duration-300">
+        <ProjectsMinimal onOpenDetails={() => handleOpenDetails('projects')} />
+      </div>
+
+      {/* Formation - carte haute */}
+      <div className="col-span-2 bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all duration-300">
+        <EducationMinimal onOpenDetails={() => handleOpenDetails('education')} />
+      </div>
+
+      {/* Experience Professionnelle */}
+      <div className="col-span-2 bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all duration-300">
+        <ExperienceMinimal onOpenDetails={() => handleOpenDetails('experience')} />
+      </div>
+
+
+      {/* CV - carte avec informations et bouton de téléchargement */}
+      <div className="col-span-2 bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all duration-300">
+        <CVMinimal />
+      </div>
+
+      {/* Contact - carte large (composant original) */}
+      <div className="col-span-6 bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all duration-300">
+        <Contact />
+      </div>
     </div>
   );
 }
