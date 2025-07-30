@@ -26,7 +26,7 @@ export default function ContactMinimal({ onOpenDetails }: ContactMinimalProps) {
         <div className="flex items-center gap-2 p-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg border border-primary/20">
           <Mail className="w-4 h-4 text-primary" />
           <div>
-            <p className="text-xs font-medium text-gray-800">contact@linerol.dev</p>
+            <p className="text-xs font-medium text-gray-800">sessiessenamlinerol.tchecounnou@ynov.com</p>
             <p className="text-xs text-gray-600">Email professionnel</p>
           </div>
         </div>

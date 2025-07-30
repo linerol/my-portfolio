@@ -27,7 +27,7 @@ const socialLinks = [
   },
   {
     name: "Portfolio",
-    url: "https://linerol.dev",
+    url: "https://my-portfolio-152t.onrender.com",
     icon: MessageSquare,
     color: "text-primary",
     bgColor: "bg-primary/10"

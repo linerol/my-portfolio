@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Github, Linkedin, MessageSquare, Send, ArrowLeft, Calendar, Users, Globe } from "lucide-react";
 
 const contactInfo = {
-  email: "contact@linerol.dev",
+  email: "sessiessenamlinerol.tchecounnou@ynov.com",
   phone: "+33 6 XX XX XX XX",
-  location: "France",
+  location: "France, Ile de France",
   availability: "Disponible pour alternance (2 semaines entreprise / 1 semaine école)",
   startDate: "Septembre 2025",
   workMode: "Remote, présentiel ou hybride"
@@ -28,7 +28,7 @@ const socialLinks = [
   },
   {
     name: "Portfolio",
-    url: "https://linerol.dev",
+    url: "https://my-portfolio-152t.onrender.com",
     icon: MessageSquare,
     color: "text-primary",
     bgColor: "bg-primary/10"

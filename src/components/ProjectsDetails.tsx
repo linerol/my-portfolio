@@ -153,7 +153,7 @@ const projects = [
     ],
     state: "En ligne et maintenu",
     github: "https://github.com/linerol/portfolio",
-    demo: "https://linerol.dev",
+    demo: "https://my-portfolio-152t.onrender.com",
     color: "from-indigo-500 to-cyan-500",
     icon: Globe,
     image: null,
