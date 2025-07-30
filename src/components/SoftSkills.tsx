@@ -1,9 +1,9 @@
 "use client"
 import { motion } from "framer-motion";
 import { 
-  Users, Lightbulb, Target, MessageSquare, 
-  Clock, TrendingUp, Heart, Zap, Cpu, Settings,
-  Brain, Gauge, Layers, GitBranch, Eye, Search
+  Users, Target, MessageSquare, 
+  Heart, Zap, Cpu, Settings,
+  Brain, Gauge, Layers, Eye, Search
 } from "lucide-react";
 
 const softSkills = [

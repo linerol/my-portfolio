@@ -32,7 +32,7 @@ export default function SoftSkillsMinimal({ onOpenDetails }: SoftSkillsMinimalPr
 
       {/* Compétences principales */}
       <div className="grid grid-cols-2 gap-2 mb-4">
-        {mainSkills.map((skill, index) => (
+        {mainSkills.map((skill) => (
           <div
             key={skill.name}
             className={`flex items-center gap-2 p-2 rounded-lg ${skill.bgColor} border border-gray-100`}
@@ -47,7 +47,7 @@ export default function SoftSkillsMinimal({ onOpenDetails }: SoftSkillsMinimalPr
 
       {/* Compétences supplémentaires */}
       <div className="flex flex-wrap gap-1 mb-4">
-        {additionalSkills.map((skill, index) => (
+        {additionalSkills.map((skill) => (
           <span
             key={skill.name}
             className={`px-2 py-1 bg-white rounded-full text-xs font-medium ${skill.color} border border-gray-200`}
@@ -71,7 +71,7 @@ export default function SoftSkillsMinimal({ onOpenDetails }: SoftSkillsMinimalPr
         <Heart className="w-4 h-4 text-warning" />
         <div>
           <p className="text-xs font-semibold text-gray-800">Approche</p>
-          <p className="text-xs text-gray-600 italic">"Coder utile, coder durable"</p>
+          <p className="text-xs text-gray-600 italic">&ldquo;Coder utile, coder durable&rdquo;</p>
         </div>
       </div>
 

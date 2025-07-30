@@ -1,5 +1,5 @@
 "use client"
-import { User, ArrowRight, Target, Sparkles, MapPin, Calendar, Code, Zap } from 'lucide-react';
+import { User, ArrowRight, Target, Sparkles, MapPin, Code, Zap } from 'lucide-react';
 
 interface PresentationMinimalProps {
   onOpenDetails: () => void;
@@ -65,7 +65,7 @@ export default function PresentationMinimal({ onOpenDetails }: PresentationMinim
         <div>
           <p className="text-xs font-semibold text-gray-800">Philosophie</p>
           <p className="text-xs text-gray-600 italic">
-            "Coder utile, coder durable"
+            &ldquo;Coder utile, coder durable&rdquo;
           </p>
         </div>
       </div>

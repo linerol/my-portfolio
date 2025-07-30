@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
-import { GraduationCap, Calendar, BookOpen, Award, Cpu, Zap, Users, TestTube, FileText, MapPin, ArrowLeft } from "lucide-react";
+import { Calendar, Award, Zap, Users, MapPin, ArrowLeft } from "lucide-react";
 
 const education = {
   currentDegree: "Mastère 1 en Développement Logiciel, Mobile & IoT",

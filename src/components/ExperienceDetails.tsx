@@ -1,8 +1,8 @@
 "use client"
 import { motion } from "framer-motion";
 import { 
-  Briefcase, ArrowLeft, Calendar, MapPin, Code, TrendingUp, Users, 
-  Award, CheckCircle, Target, Zap, Building
+  ArrowLeft, Calendar, MapPin, Code, TrendingUp, Users, 
+  CheckCircle, Target
 } from "lucide-react";
 
 interface ExperienceDetailsProps {
@@ -94,7 +94,7 @@ export default function ExperienceDetails({ onClose }: ExperienceDetailsProps) {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Parcours professionnel</h2>
           <p className="text-gray-700 leading-relaxed text-lg">
             Mon parcours professionnel reflète une progression constante dans le développement logiciel, 
-            de l'enseignement à l'ingénierie, en passant par le développement mobile et IoT. 
+            de l&apos;enseignement à l&apos;ingénierie, en passant par le développement mobile et IoT. 
             Chaque expérience a contribué à enrichir mes compétences techniques et ma vision du développement.
           </p>
         </motion.div>

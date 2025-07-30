@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
-import { Download, FileText, ArrowLeft, Calendar, MapPin, Users, Code, Award } from "lucide-react";
+import { Download, FileText, ArrowLeft, Users, Code, Award } from "lucide-react";
 
 interface CVDetailsProps {
   onClose: () => void;

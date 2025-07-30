@@ -1,5 +1,6 @@
 "use client"
-import { FolderOpen, ArrowRight, Calendar, Users, Code, Zap, HeartPulse, Globe, Database } from "lucide-react";
+import { FolderOpen, ArrowRight, Code, Zap, HeartPulse, Globe } from "lucide-react";
+import Image from "next/image";
 
 interface ProjectsMinimalProps {
   onOpenDetails: () => void;
@@ -22,7 +23,7 @@ const mainProjects = [
     color: "from-cyan-50 to-blue-50",
     borderColor: "border-cyan-200",
     image: "/quantix.png",
-    description: "Gestion sécurisée et moderne de produits avec authentification, upload d’images, API documentée et déploiement cloud."
+    description: "Gestion sécurisée et moderne de produits avec authentification, upload d&apos;images, API documentée et déploiement cloud."
   },
 ];
 
@@ -42,7 +43,7 @@ export default function ProjectsMinimal({ onOpenDetails }: ProjectsMinimalProps)
 
       {/* Projets principaux avec images */}
       <div className="grid grid-cols-2 gap-3 mb-4">
-        {mainProjects.map((project, index) => (
+        {mainProjects.map((project) => (
           <div
             key={project.name}
             className={`p-3 bg-gradient-to-br ${project.color} rounded-lg border ${project.borderColor} hover:shadow-md transition-all duration-300`}
@@ -54,9 +55,11 @@ export default function ProjectsMinimal({ onOpenDetails }: ProjectsMinimalProps)
               ) : project.name === "Portfolio Web" ? (
                 <Globe className="w-8 h-8 text-indigo-500" />
               ) : project.name === "Quantix" ? (
-                <img
-                  src={project.image || undefined}
+                <Image
+                  src={project.image || ""}
                   alt="Quantix logo"
+                  width={80}
+                  height={80}
                   className="object-contain w-full h-full"
                 />
               ) : (

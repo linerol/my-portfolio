@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
-import { TrendingUp, Calendar, Users, Award, ArrowLeft, Code, Zap, Heart, Target } from "lucide-react";
+import { Calendar, Users, Award, ArrowLeft, Code, Target } from "lucide-react";
 
 interface QuickStatsDetailsProps {
   onClose: () => void;

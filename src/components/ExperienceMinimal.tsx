@@ -1,5 +1,5 @@
 "use client"
-import { Briefcase, Calendar, MapPin, Code, ArrowRight, TrendingUp, Users, Award } from "lucide-react";
+import { Briefcase, Calendar, MapPin, Code, ArrowRight, TrendingUp, Users } from "lucide-react";
 
 interface ExperienceMinimalProps {
   onOpenDetails: () => void;

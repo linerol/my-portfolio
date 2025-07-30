@@ -99,7 +99,7 @@ export default function EducationMinimal({ onOpenDetails }: EducationMinimalProp
 
       {/* Statistiques */}
       <div className="grid grid-cols-3 gap-2 mb-3">
-        {educationStats.map((stat, index) => (
+        {educationStats.map((stat) => (
           <div
             key={stat.label}
             className="flex flex-col items-center p-2 bg-white rounded-lg shadow-sm border border-gray-100"

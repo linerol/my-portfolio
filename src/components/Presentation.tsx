@@ -45,7 +45,7 @@ export default function Presentation({ onOpenDetails }: PresentationProps) {
         <div>
           <h3 className="font-semibold text-gray-800 mb-1">Objectif actuel</h3>
           <p className="text-gray-600 text-sm">
-            Recherche d'une <strong>alternance de 1 an</strong> à partir de septembre 2025
+            Recherche d&apos;une <strong>alternance de 1 an</strong> à partir de septembre 2025
           </p>
         </div>
       </motion.div>
@@ -61,7 +61,7 @@ export default function Presentation({ onOpenDetails }: PresentationProps) {
         <div>
           <h3 className="font-semibold text-gray-800 mb-1">Philosophie</h3>
           <p className="text-gray-600 text-sm italic">
-            "Coder utile, coder durable. Toujours partir du besoin utilisateur."
+            &ldquo;Coder utile, coder durable. Toujours partir du besoin utilisateur.&rdquo;
           </p>
         </div>
       </motion.div>
