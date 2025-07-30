@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
 import { 
-  FolderOpen, ArrowLeft, Calendar, Users, Code, Zap, 
-  ExternalLink, Github, Globe, Smartphone, Database, Cloud,
+  ArrowLeft, 
+  ExternalLink, Github, Globe, Database,
   Search, Filter, SortAsc, SortDesc, HeartPulse, Cpu, Leaf
 } from "lucide-react";
 
@@ -13,9 +13,9 @@ const projects = [
     status: "Terminé",
     period: "21-22 janvier 2025",
     team: "Équipe hackathon",
-    description: "Application mobile pour aider les utilisateurs à adopter des habitudes plus respectueuses de l'environnement. Sensibilisation et encouragement à réduire l'impact écologique au quotidien.",
-    public: "Utilisateurs souhaitant adopter un mode de vie plus écologique. Personnes qui veulent suivre des objectifs environnementaux personnalisés, obtenir des informations sur l'impact écologique des produits, apprendre de nouvelles pratiques écologiques et participer à une communauté engagée pour l'environnement.",
-    objectif: "Aider les utilisateurs à adopter des habitudes plus respectueuses de l'environnement. Application mobile conçue pour sensibiliser et encourager les utilisateurs à réduire leur impact écologique au quotidien.",
+    description: "Application mobile pour aider les utilisateurs à adopter des habitudes plus respectueuses de l&apos;environnement. Sensibilisation et encouragement à réduire l&apos;impact écologique au quotidien.",
+    public: "Utilisateurs souhaitant adopter un mode de vie plus écologique. Personnes qui veulent suivre des objectifs environnementaux personnalisés, obtenir des informations sur l&apos;impact écologique des produits, apprendre de nouvelles pratiques écologiques et participer à une communauté engagée pour l&apos;environnement.",
+    objectif: "Aider les utilisateurs à adopter des habitudes plus respectueuses de l&apos;environnement. Application mobile conçue pour sensibiliser et encourager les utilisateurs à réduire leur impact écologique au quotidien.",
     technologies: ["React Native", "Expo", "TypeScript", "React Navigation", "Open Food Facts API", "AsyncStorage", "Expo Camera", "Jest", "TypeDoc"],
     features: [
       "Suivi des objectifs personnalisés : Définition et suivi d'objectifs écologiques avec mini-tâches",
@@ -165,9 +165,9 @@ const projects = [
     status: "En test",
     period: "Juillet 2025",
     team: "Solo",
-    description: "Application web de gestion sécurisée et moderne de produits avec authentification, upload d’images, API documentée et déploiement cloud.",
+    description: "Application web de gestion sécurisée et moderne de produits avec authentification, upload d&apos;images, API documentée et déploiement cloud.",
     objectif: "Permettre à chaque utilisateur de gérer ses produits de façon simple, moderne et sécurisée, avec une authentification robuste et une architecture scalable.",
-    public: "Utilisateurs finaux (indépendants, PME, étudiants) ou organisations ayant besoin d’une gestion de produits sécurisée.",
+    public: "Utilisateurs finaux (indépendants, PME, étudiants) ou organisations ayant besoin d&apos;une gestion de produits sécurisée.",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "NestJS", "MongoDB", "Azure Blob Storage", "Azure App Service", "Docker", "JWT", "bcrypt", "Passport.js", "class-validator", "Swagger"],
     features: [
       "Authentification sécurisée (JWT, bcrypt, Passport.js)",
@@ -202,7 +202,7 @@ const projects = [
     icon: Database,
     image: "/quantix.png",
     date: "2025-07",
-    anecdote: "Fier d’avoir intégré l’upload d’images sur Azure Blob Storage et déployé l’ensemble sur Azure App Service avec Docker. L’architecture modulaire et la documentation Swagger rendent le projet facilement maintenable. Projet 100% personnel, mené de A à Z."
+    anecdote: "Fier d&apos;avoir intégré l&apos;upload d&apos;images sur Azure Blob Storage et déployé l&apos;ensemble sur Azure App Service avec Docker. L&apos;architecture modulaire et la documentation Swagger rendent le projet facilement maintenable. Projet 100% personnel, mené de A à Z."
   }
 ];
 
@@ -258,8 +258,8 @@ export default function ProjectsDetails({ onClose }: ProjectsDetailsProps) {
         <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-sm">
           <h2 className="text-xl font-bold text-gray-900 mb-3">Développement fullstack et innovation</h2>
           <p className="text-gray-700 leading-relaxed">
-            Mes projets reflètent ma passion pour le développement fullstack, l'IoT et l'innovation. 
-            Chaque projet est une opportunité d'apprendre de nouvelles technologies et de créer des solutions 
+            Mes projets reflètent ma passion pour le développement fullstack, l&apos;IoT et l&apos;innovation. 
+            Chaque projet est une opportunité d&apos;apprendre de nouvelles technologies et de créer des solutions 
             qui améliorent le quotidien des utilisateurs.
           </p>
         </div>
@@ -317,7 +317,7 @@ export default function ProjectsDetails({ onClose }: ProjectsDetailsProps) {
 
         {/* Projets filtrés */}
         <div className="space-y-6">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <div
               key={project.id}
               className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"

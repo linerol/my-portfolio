@@ -1,5 +1,5 @@
 "use client"
-import { Code, Cloud, Database, Cpu, ArrowRight, Zap, Settings, Palette } from "lucide-react";
+import { Code, Cloud, Database, Cpu, ArrowRight, Zap, Settings } from "lucide-react";
 
 interface TechnicalSkillsMinimalProps {
   onOpenDetails: () => void;
@@ -26,7 +26,7 @@ export default function TechnicalSkillsMinimal({ onOpenDetails }: TechnicalSkill
 
       {/* Catégories */}
       <div className="grid grid-cols-2 gap-2 flex-1">
-        {categories.map((category, index) => (
+        {categories.map((category) => (
           <div
             key={category.name}
             className={`flex flex-col items-center justify-center p-2 bg-gradient-to-br ${category.bgColor} rounded-lg border border-gray-200`}

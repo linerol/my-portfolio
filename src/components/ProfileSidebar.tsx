@@ -11,8 +11,6 @@ const funFacts = [
 ];
 
 export default function ProfileSidebar() {
-  // Sidebar mobile
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   // Citation dynamique côté client uniquement
   const [randomFact, setRandomFact] = useState(funFacts[0]);
   useEffect(() => {
@@ -44,7 +42,7 @@ export default function ProfileSidebar() {
         <div className="text-lg font-semibold text-blue-600 text-center mb-2">Développeur logiciel et IoT</div>
         
         {/* Sous-titre */}
-        <div className="text-base font-medium text-gray-600 text-center mb-3">En recherche d'alternance</div>
+        <div className="text-base font-medium text-gray-600 text-center mb-3">En recherche d&apos;alternance</div>
         
         {/* Localisation */}
         <div className="flex items-center gap-2 text-blue-600 font-medium bg-blue-50 px-4 py-2 rounded-full shadow-sm border border-blue-200 mb-4">

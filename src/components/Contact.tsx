@@ -1,5 +1,5 @@
 "use client"
-import { Mail, Phone, MapPin, Github, Linkedin, MessageSquare, Send, Download } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, MessageSquare } from "lucide-react";
 
 const contactInfo = {
   email: "sessiessenamlinerol.tchecounnou@ynov.com",
@@ -81,7 +81,7 @@ export default function Contact() {
           className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-primary-gradient text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
         >
           <Mail className="w-5 h-5" />
-          M'envoyer un email
+          M&apos;envoyer un email
         </button>
       </div>
 
@@ -89,7 +89,7 @@ export default function Contact() {
       <div className="mb-6">
         <h3 className="font-semibold text-gray-800 mb-3 text-sm">Réseaux professionnels</h3>
         <div className="grid grid-cols-3 gap-2">
-          {socialLinks.map((social, index) => (
+          {socialLinks.map((social) => (
             <a
               key={social.name}
               href={social.url}

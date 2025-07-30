@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Github, Linkedin, MessageSquare, Send, Download, ArrowLeft, Calendar, Users, Globe } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, MessageSquare, Send, ArrowLeft, Calendar, Users, Globe } from "lucide-react";
 
 const contactInfo = {
   email: "contact@linerol.dev",

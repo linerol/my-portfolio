@@ -1,5 +1,5 @@
 "use client"
-import { Download, FileText, Calendar, MapPin, Code } from "lucide-react";
+import { Download, FileText, Calendar, MapPin } from "lucide-react";
 
 export default function CVMinimal() {
   const handleDownload = () => {
@@ -26,7 +26,7 @@ export default function CVMinimal() {
         <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg border border-primary/20">
           <Calendar className="w-4 h-4 text-primary" />
           <div>
-            <p className="text-sm font-semibold text-gray-800">3+ années d'expérience</p>
+            <p className="text-sm font-semibold text-gray-800">3+ années d&apos;expérience</p>
             <p className="text-xs text-gray-600">Développement Logiciel</p>
           </div>
         </div>

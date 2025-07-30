@@ -1,6 +1,5 @@
 "use client"
-import { motion } from "framer-motion"
-import { Code, Target, Sparkles, Zap, Cpu, Cloud, Heart, TrendingUp, Palette, ArrowLeft, User, Briefcase, Lightbulb, Award } from 'lucide-react';
+import { Code, Target, Zap, Cpu, Cloud, Heart, TrendingUp, Palette, ArrowLeft, Briefcase, Lightbulb, Award } from 'lucide-react';
 
 interface PresentationDetailsProps {
   onClose: () => void;
@@ -43,7 +42,7 @@ export default function PresentationDetails({ onClose }: PresentationDetailsProp
             <h2 className="text-xl font-bold text-gray-900">Objectif actuel</h2>
           </div>
           <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-            <h3 className="font-semibold text-gray-900 mb-2">Recherche d'alternance</h3>
+            <h3 className="font-semibold text-gray-900 mb-2">Recherche d&apos;alternance</h3>
             <p className="text-gray-700 mb-3">
               Je recherche une <strong>alternance de 1 an</strong> à partir de septembre 2025
               dans le domaine du développement logiciel, mobile ou IoT.
@@ -69,8 +68,8 @@ export default function PresentationDetails({ onClose }: PresentationDetailsProp
           </div>
           <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
             <blockquote className="text-gray-700 text-lg italic leading-relaxed">
-              "Coder utile, coder durable. Toujours partir du besoin utilisateur, 
-              puis itérer, tester, automatiser et optimiser."
+              &ldquo;Coder utile, coder durable. Toujours partir du besoin utilisateur, 
+              puis itérer, tester, automatiser et optimiser.&rdquo;
             </blockquote>
           </div>
         </div>
@@ -88,8 +87,8 @@ export default function PresentationDetails({ onClose }: PresentationDetailsProp
                 <h3 className="font-semibold text-gray-900">API REST</h3>
               </div>
               <p className="text-gray-700 text-sm">
-                Développement d'APIs robustes avec NestJS, authentification JWT, 
-                gestion d'erreurs et documentation Swagger.
+                Développement d&apos;APIs robustes avec NestJS, authentification JWT, 
+                gestion d&apos;erreurs et documentation Swagger.
               </p>
             </div>
             
@@ -175,7 +174,7 @@ export default function PresentationDetails({ onClose }: PresentationDetailsProp
             <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
               <h3 className="font-semibold text-gray-900 mb-2">Fullstack</h3>
               <p className="text-gray-700 text-sm">
-                Expertise sur toutes les couches d'une architecture logicielle, de l'embarqué au cloud.
+                Expertise sur toutes les couches d&apos;une architecture logicielle, de l&apos;embarqué au cloud.
               </p>
             </div>
           </div>

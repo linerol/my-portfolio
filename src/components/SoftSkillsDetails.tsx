@@ -1,9 +1,9 @@
 "use client"
 import { motion } from "framer-motion";
 import { 
-  Users, Lightbulb, Target, MessageSquare, 
-  Clock, TrendingUp, Heart, Zap, Cpu, Settings,
-  Brain, Gauge, Layers, GitBranch, Eye, Search, ArrowLeft
+  Users, Target, MessageSquare, 
+  Heart, Zap, Cpu, Settings,
+  Brain, Gauge, Layers, Eye, Search, ArrowLeft
 } from "lucide-react";
 
 const coreSkills = [
@@ -266,7 +266,7 @@ export default function SoftSkillsDetails({ onClose }: SoftSkillsDetailsProps) {
                   <li>• Analyse des besoins réels avant développement</li>
                   <li>• Tests utilisateurs et feedback continu</li>
                   <li>• Itérations basées sur les retours</li>
-                  <li>• Documentation claire pour l'équipe</li>
+                  <li>• Documentation claire pour l&apos;équipe</li>
                 </ul>
               </div>
               <div>
@@ -278,7 +278,7 @@ export default function SoftSkillsDetails({ onClose }: SoftSkillsDetailsProps) {
                   <li>• Scrum avec sprints de 2 semaines</li>
                   <li>• Daily standups et rétrospectives</li>
                   <li>• Gestion de projet avec Jira/Trello</li>
-                  <li>• Communication transparente avec l'équipe</li>
+                  <li>• Communication transparente avec l&apos;équipe</li>
                 </ul>
               </div>
             </div>
@@ -296,9 +296,9 @@ export default function SoftSkillsDetails({ onClose }: SoftSkillsDetailsProps) {
               Philosophie de développement
             </h3>
             <blockquote className="text-gray-700 italic text-lg leading-relaxed">
-              "Coder utile, coder durable. Toujours partir du besoin utilisateur pour créer des solutions 
+              &ldquo;Coder utile, coder durable. Toujours partir du besoin utilisateur pour créer des solutions 
               qui améliorent réellement le quotidien. La qualité du code et la maintenabilité sont aussi 
-              importantes que la fonctionnalité."
+              importantes que la fonctionnalité.&rdquo;
             </blockquote>
           </motion.div>
         </div>
