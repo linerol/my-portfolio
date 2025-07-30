@@ -3,9 +3,16 @@ import { Download, FileText, Calendar, MapPin } from "lucide-react";
 
 export default function CVMinimal() {
   const handleDownload = () => {
-    // Logique de téléchargement du CV
-    console.log("Téléchargement du CV");
-    // Ici vous pouvez ajouter la logique pour télécharger le fichier CV
+    // Créer un lien temporaire pour télécharger le CV
+    const link = document.createElement('a');
+    link.href = '/CV-Linerol.pdf';
+    link.download = 'CV-Linerol.pdf';
+    link.target = '_blank';
+    
+    // Déclencher le téléchargement
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
